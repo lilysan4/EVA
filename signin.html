@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EVA — Sign In</title>
+  <meta name="description" content="Sign in to your EVA account, or create one as a Donor or a Family." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Radley:ital@0;1&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- TOPBAR -->
+  <header class="topbar">
+    <a href="index.html" class="logo">
+      <span class="heart" aria-hidden="true"></span>
+      <span class="eva-text">EVA</span>
+    </a>
+
+    <nav class="nav-center" aria-label="Main navigation">
+      <a href="families.html">Our Families</a>
+      <a href="donors.html">Our Donors</a>
+      <a href="#">Request Support</a>
+    </nav>
+
+    <div class="nav-right">
+      <a href="signin.html" class="signin">Sign in</a>
+      <a href="donate.html" class="donate-btn">Donate</a>
+    </div>
+  </header>
+
+  <main class="auth-stage">
+    <div class="auth-card">
+      <p class="eyebrow">Welcome Back</p>
+      <h1 class="auth-title">Sign in to EVA</h1>
+
+      <div class="auth-tabs">
+        <button type="button" class="auth-tab active" data-tab="signin">Sign In</button>
+        <button type="button" class="auth-tab" data-tab="signup">Create Account</button>
+      </div>
+
+      <form id="signin-form" class="auth-form active">
+        <label>Email
+          <input type="email" required autocomplete="email" />
+        </label>
+        <label>Password
+          <input type="password" required autocomplete="current-password" />
+        </label>
+        <a href="#" class="auth-forgot">Forgot password?</a>
+        <button type="submit" class="btn btn-primary auth-submit">Sign In</button>
+      </form>
+
+      <form id="signup-form" class="auth-form">
+        <p class="auth-role-label">I am signing up as a:</p>
+        <div class="auth-role-grid">
+          <button type="button" class="auth-role-chip active" data-role="Donor">Donor</button>
+          <button type="button" class="auth-role-chip" data-role="Family">Family</button>
+        </div>
+        <label>Full name
+          <input type="text" required autocomplete="name" />
+        </label>
+        <label>Email
+          <input type="email" required autocomplete="email" />
+        </label>
+        <label>Password
+          <input type="password" required autocomplete="new-password" />
+        </label>
+        <label>Confirm password
+          <input type="password" required autocomplete="new-password" />
+        </label>
+        <button type="submit" class="btn btn-primary auth-submit">Create Account</button>
+      </form>
+
+      <p class="auth-message" id="auth-message" hidden></p>
+    </div>
+  </main>
+
+  <!-- CONTACT / FOOTER -->
+  <footer class="footer" id="contact">
+    <div class="footer-top">
+      <h2 class="footer-title">
+        EVA. Connecting
+        <span class="footer-circle">generosity
+          <svg viewBox="0 0 260 90" aria-hidden="true">
+            <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              d="M40 55 C30 26 90 16 140 18 C210 21 250 34 244 55 C239 72 170 84 110 82 C52 80 18 66 26 40 C32 22 90 14 150 18" />
+          </svg>
+        </span>
+        with real lives.
+      </h2>
+    </div>
+
+    <hr class="footer-divider">
+
+    <div class="footer-bottom">
+      <div class="footer-socials">
+        <p class="footer-socials-label">To see more of our work, visit our socials:</p>
+        <div class="social-row">
+          <a href="#" aria-label="Facebook" class="social">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M13 22v-8h2.7l.4-3H13V9c0-.9.3-1.5 1.6-1.5H16V4.8C15.7 4.8 14.7 4.7 13.6 4.7 11.2 4.7 9.5 6.2 9.5 8.9V11H7v3h2.5v8z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram" class="social">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.7" d="M4 8a4 4 0 014-4h8a4 4 0 014 4v8a4 4 0 01-4 4H8a4 4 0 01-4-4z"/><circle cx="12" cy="12" r="3.2" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="17" cy="7" r="1.1" fill="currentColor"/></svg>
+          </a>
+          <a href="#" aria-label="X" class="social">
+            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M17.5 3h3l-6.6 7.5L21.5 21h-5.8l-4.3-5.6L6.3 21H3.3l7-8L2.8 3h6l3.9 5.1zM16.4 19.2h1.6L7.7 4.7H6z"/></svg>
+          </a>
+          <span class="social-handle">@evadonationsofficial</span>
+        </div>
+      </div>
+
+      <div class="footer-contact">
+        <div class="contact-item">
+          <span class="contact-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16v12H4z M4 7l8 6 8-6"/></svg>
+          </span>
+          <div>
+            <p class="contact-label">Phone</p>
+            <p class="contact-value">(123) 456 7890</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M5 4c1 0 2 .3 2.5 2l.7 2.3c.2.7 0 1.3-.5 1.7l-1 .8a11 11 0 004.8 4.8l.8-1c.4-.5 1-.7 1.7-.5l2.3.7c1.7.5 2 1.5 2 2.5 0 1.6-1.4 3-3 3A15 15 0 015 7c0-1.6 1.4-3 3-3z"/></svg>
+          </span>
+          <div>
+            <p class="contact-label">Email</p>
+            <p class="contact-value">evadonationsofficial@eva.org</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="auth.js"></script>
+</body>
+</html>
