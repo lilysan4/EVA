@@ -97,17 +97,3 @@ if (menuBtn && navCenter) {
     });
   });
 }
-
-  const countObserver = new IntersectionObserver(
-    (entries, obs) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          runCount(entry.target);
-          obs.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.5 }
-  );
-
-  counters.forEach((el) => countObserver.observe(el));s
