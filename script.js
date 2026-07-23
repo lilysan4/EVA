@@ -78,3 +78,37 @@ if (counters.length) {
 
   counters.forEach((el) => countObserver.observe(el));
 }
+
+// Menu hambúrguer (mobile)
+const menuBtn = document.querySelector(".mobile-menu-btn");
+const navCenter = document.querySelector(".nav-center");
+
+if (menuBtn && navCenter) {
+  menuBtn.addEventListener("click", () => {
+    menuBtn.classList.toggle("open");
+    navCenter.classList.toggle("mobile-open");
+  });
+
+  // fecha o menu ao clicar em um link
+  navCenter.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      menuBtn.classList.remove("open");
+      navCenter.classList.remove("mobile-open");
+    });
+  });
+}
+
+  const countObserver = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          runCount(entry.target);
+          obs.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+
+  counters.forEach((el) => countObserver.observe(el));
+}
