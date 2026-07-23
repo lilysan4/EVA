@@ -1,0 +1,13 @@
+{
+  "name": "eva-website",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "serve . -l 3000",
+    "build": "echo \"static site, nothing to build\"",
+    "start": "serve . -l 3000"
+  },
+  "dependencies": {
+    "serve": "14.2.6"
+  }
+}
