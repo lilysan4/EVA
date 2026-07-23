@@ -110,5 +110,4 @@ if (menuBtn && navCenter) {
     { threshold: 0.5 }
   );
 
-  counters.forEach((el) => countObserver.observe(el));
-}
+  counters.forEach((el) => countObserver.observe(el));s
